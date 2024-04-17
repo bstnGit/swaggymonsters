@@ -1,12 +1,18 @@
-import { Swaggy } from "@/assets/swaggymonster";
+import { Swaggy } from "../../public/swaggymonster";
+import { twMerge } from "tailwind-merge";
 
 export default function Navbar({ className }: { className?: string }) {
   return (
-    <header className="bg-[#EC0203]  py-4  w-full mx-auto flex items-center border-b-4 text-white font-semibold border-[#FFC919]">
+    <nav
+      className={twMerge(
+        "relative bg-[#EC0203] py-4 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919]",
+        className
+      )}
+    >
       <div className="absolute top-[40%] left-[20%]">
         <Swaggy />
       </div>
-      <ul className="flex items-center w-full justify-center gap-12  [&_a:hover]:text-blue-500">
+      <ul className="flex items-center w-full justify-center gap-12  [&_a:hover]:font-semibold">
         <li>
           <a href="">About</a>
         </li>
@@ -23,6 +29,6 @@ export default function Navbar({ className }: { className?: string }) {
           <a href="">Kontakt</a>
         </li>
       </ul>
-    </header>
+    </nav>
   );
 }
