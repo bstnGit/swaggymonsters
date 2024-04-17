@@ -1,14 +1,8 @@
 import { Swaggy } from "@/assets/swaggymonster";
-import classNames from "classnames";
 
 export default function Navbar({ className }: { className?: string }) {
   return (
-    <header
-      className={classNames(
-        "bg-[#EC0203]  py-4  w-full mx-auto flex items-center border-b-4 text-white font-semibold border-[#FFC919]",
-        className
-      )}
-    >
+    <header className="bg-[#EC0203]  py-4  w-full mx-auto flex items-center border-b-4 text-white font-semibold border-[#FFC919]">
       <div className="absolute top-[40%] left-[20%]">
         <Swaggy />
       </div>
