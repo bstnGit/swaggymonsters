@@ -1,5 +1,9 @@
+import Presale from "@/components/presale";
+
 export default function Home() {
   return (
-    <main className=""></main>
+    <main className="">
+      <Presale />
+    </main>
   );
 }

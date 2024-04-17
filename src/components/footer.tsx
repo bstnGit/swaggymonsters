@@ -1,6 +1,10 @@
-export default function Footer() {
+import { twMerge } from "tailwind-merge";
+
+export default function Footer({ className }: { className?: string }) {
   return (
-    <footer className="flex justify-center bg-[#FFA500] py-5">
+    <footer
+      className={twMerge("flex justify-center bg-[#FFA500] py-5", className)}
+    >
       <div className="flex flex-col w-full text-center">
         <p className="text-xs italic">
           Swaggy Monsters is a meme coin with no intrinsic value or expectation
