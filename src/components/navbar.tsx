@@ -2,7 +2,7 @@ import { Swaggy } from "../../public/swaggymonster";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 
-export default function Navbar({ className }: { className?: string }) {
+export default async function Navbar({ className }: { className?: string }) {
   return (
     <header>
       <nav

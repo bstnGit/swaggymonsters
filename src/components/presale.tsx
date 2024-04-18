@@ -1,4 +1,4 @@
-import { Copy } from "@/assets/copy";
+import { Copy } from "../../public/copy";
 import { Button } from "./ui/button";
 
 export const Presale = () => {
@@ -13,11 +13,11 @@ export const Presale = () => {
           <h1 className="font-bold">Copy & Send SOL</h1>
           <div className="flex items-center gap-4">
             <div>
-              <Button className="bg-[#FFA500] hover:bg-[#fcac19]">
+              <Button className="bg-[#FFA500] hover:bg-[#fcac19] text-[#000]">
                 FPjsfF8wSyLaxVbfPKxmgKjiXyqr8U1zbUc5kx7QBvGu
               </Button>
             </div>
-            <Button className="bg-[#FFA500] hover:bg-[#fcac19]">
+            <Button className="bg-[#FFA500] hover:bg-[#fcac19] text-[#000]">
               <Copy />
             </Button>
           </div>
@@ -25,7 +25,7 @@ export const Presale = () => {
 
         <div className="bg-[#FFE6BA] w-full h-auto pb-8 pt-4 gap-4 px-12 items-center flex rounded-sm flex-col">
           <h1 className="font-bold">Connect your wallet now!</h1>
-          <Button className="py-4 rounded-sm px-4 bg-[#FFA500] hover:bg-[#fcac19]">
+          <Button className="py-4 rounded-sm px-4 bg-[#FFA500] hover:bg-[#fcac19] text-[#000]">
             Connect Wallet
           </Button>
         </div>

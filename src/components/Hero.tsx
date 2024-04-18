@@ -1,4 +1,4 @@
-export const Hero = () => {
+export default function Hero() {
   return (
     <section className="bg-[#FFA500] h-screen">
       <div className="font-bold [&_h1]:text-[4rem] flex flex-col items-center justify-center">
@@ -8,4 +8,4 @@ export const Hero = () => {
       </div>
     </section>
   );
-};
+}
