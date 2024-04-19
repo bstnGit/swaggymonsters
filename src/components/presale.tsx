@@ -9,7 +9,7 @@ export const Presale = () => {
         <p>102.98 SOL has already been collected!</p>
       </div>
       <div className="w-fit flex flex-col gap-12 mx-auto">
-        <div className="bg-[#FFE6BA] w-full h-auto  py-4 gap-4 px-12 items-center flex rounded-sm flex-col">
+        <div className="bg-[#FFE6BA] w-full h-auto  pt-4 gap-4 pb-8 px-12 items-center flex rounded-sm flex-col">
           <h1 className="font-bold">Copy & Send SOL</h1>
           <div className="flex items-center gap-4">
             <div>

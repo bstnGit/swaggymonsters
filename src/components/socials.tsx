@@ -15,7 +15,7 @@ const socials = [
 
 export const Socials = () => {
   return (
-    <div className="flex flex-col fixed right-7 top-[50%] gap-6">
+    <div className="bg-transparent flex flex-col fixed right-7 top-[50%] gap-6">
       {socials.map((social, index) => (
         <a
           key={index}
@@ -28,7 +28,7 @@ export const Socials = () => {
               alt={social.name}
               width={80}
               height={50}
-              className="mx-auto"
+              className="mx-auto object-cover"
             />
           ) : (
             <Image
