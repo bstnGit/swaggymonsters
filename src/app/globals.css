@@ -74,7 +74,12 @@
   a:hover {
     @apply font-semibold;
   }
-}
-
-@layer base {
+  /* styles/globals.css */
+  @font-face {
+    font-family: "swaggy";
+    src: url("/fonts/swaggyfont.woff") format("woff"),
+      url("/fonts/swaggyfont.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
 }
