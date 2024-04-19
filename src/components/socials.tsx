@@ -1,16 +1,16 @@
 import Image from "next/image";
-import Facebook from "../../public/socials/Facebook.png";
-import Instagram from "../../public/socials/Instagram.png";
-import Reddit from "../../public/socials/Reddit.png";
-import TikTok from "../../public/socials/TikTok.png";
-import Twitter from "../../public/socials/Twitter.png";
+import Facebook from "../../public/socials/facebook.png";
+import Instagram from "../../public/socials/instagram.png";
+import Reddit from "../../public/socials/reddit.png";
+import TikTok from "../../public/socials/tiktok.png";
+import Twitter from "../../public/socials/twitter.png";
 
 const socials = [
-  { name: "Facebook", image: Facebook },
-  { name: "Instagram", image: Instagram },
-  { name: "Reddit", image: Reddit },
-  { name: "TikTok", image: TikTok },
-  { name: "Twitter", image: Twitter },
+  { name: "Facebook", image: Facebook, link: "" },
+  { name: "Instagram", image: Instagram, link: "" },
+  { name: "Reddit", image: Reddit, link: "" },
+  { name: "TikTok", image: TikTok, link: "" },
+  { name: "Twitter", image: Twitter, link: "" },
 ];
 
 export const Socials = () => {
