@@ -1,6 +1,8 @@
+"use client";
 import { Swaggy } from "../../public/swaggymonster";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default async function Navbar({ className }: { className?: string }) {
   return (
@@ -54,6 +56,10 @@ export default async function Navbar({ className }: { className?: string }) {
             >
               Kontakt
             </Link>
+          </li>
+
+          <li className="ml-auto">
+            <WalletMultiButton className="!bg-[#ffa500]" />
           </li>
         </ul>
       </nav>

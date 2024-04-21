@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 import Navbar from "../components/navbar";
 import "./globals.css";
 import Footer from "@/components/footer";
-
 import { Socials } from "@/components/socials";
 import localFont from "next/font/local";
+import WalletContextProvider from "@/contexts/wallet-context-provider";
 
 const swaggy = localFont({
   src: [
@@ -37,10 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${swaggy.variable} font-swaggy`}>
-        <Navbar className="fixed top-0" />
-        <Socials />
-        {children}
-        <Footer />
+        <WalletContextProvider>
+          <Navbar className="fixed top-0" />
+          <Socials />
+          {children}
+          <Footer />
+        </WalletContextProvider>
       </body>
     </html>
   );
