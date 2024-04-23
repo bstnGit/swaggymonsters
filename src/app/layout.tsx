@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import Navbar from "../components/navbar";
 import "./globals.css";
 import Footer from "@/components/footer";
-import { Socials } from "@/components/socials";
 import localFont from "next/font/local";
 
 const swaggy = localFont({
