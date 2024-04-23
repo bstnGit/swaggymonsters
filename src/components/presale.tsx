@@ -7,6 +7,7 @@ export default function Presale() {
       className="bg-[#FBD38D] h-screen flex-col gap-8 flex items-center justify-center"
       id="presale"
     >
+      {/*
       <div className="flex items-center justify-center flex-col">
         <h1 className="font-bold text-[3rem]">Presale</h1>
         <p>102.98 SOL has already been collected!</p>
@@ -33,6 +34,7 @@ export default function Presale() {
           </Button>
         </div>
       </div>
+  */}
     </section>
   );
 }
