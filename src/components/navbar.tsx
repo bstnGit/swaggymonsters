@@ -1,57 +1,98 @@
+"use client";
+
+import { useState } from "react";
 import { Swaggy } from "../../public/swaggymonster";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
-import { GiHamburgerMenu as Hamburger } from "react-icons/gi";
+import { Hamburger } from "../../public/hamburger";
 
-export default async function Navbar({ className }: { className?: string }) {
+export default function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    console.log("Yes");
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
-    <header className="[&_p]:text-lg [&_p]:lg:block [&_p]:hidden">
+    <header id="home">
       <nav
-        className={twMerge(
-          "relative top-0 left-0 bg-[#EC0203] py-4 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919] min-h-22",
-          className
-        )}
+        className={`relative md:h-auto top-0 left-0 bg-[#EC0203] py-2 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919] ${
+          isNavOpen ? "h-screen" : "h-auto"
+        }`}
       >
-        <div className="absolute top-[40%] left-[15%]">
+        <div
+          className={`absolute top-[40%] left-[5%] md:block ${
+            isNavOpen ? "hidden" : ""
+          }`}
+        >
           <Swaggy />
         </div>
-
-        <ul className="flex items-center w-fit mx-auto justify-center gap-12">
+        <div
+          className={`inline-block md:hidden ml-auto right-0 px-6  cursor-pointer min-h-10 ${
+            isNavOpen ? "absolute top-2 " : ""
+          }`}
+          onClick={toggleNav}
+        >
+          <Hamburger />
+        </div>
+        <ul
+          className={`md:flex md:flex-row flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
+            isNavOpen ? "" : "hidden"
+          }`}
+        >
           <li>
-            <Link href="#">
-              <p>About</p>
+            <Link href="#home" passHref legacyBehavior>
+              <a
+                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
+                onClick={closeNav}
+              >
+                Home
+              </a>
             </Link>
           </li>
           <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              <p>Presale</p>
+            <Link href="#presale" passHref legacyBehavior>
+              <a
+                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
+                onClick={closeNav}
+              >
+                Presale
+              </a>
             </Link>
           </li>
           <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              <p>Tokenomics</p>
+            <Link href="#adventure" passHref legacyBehavior>
+              <a
+                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
+                onClick={closeNav}
+              >
+                Adventure
+              </a>
             </Link>
           </li>
           <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              <p>Roadmap</p>
+            <Link href="#tokenomics" passHref legacyBehavior>
+              <a
+                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
+                onClick={closeNav}
+              >
+                Tokenomics
+              </a>
             </Link>
           </li>
           <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              <p>Kontakt</p>
+            <Link href="#home" passHref legacyBehavior>
+              <a
+                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
+                onClick={closeNav}
+              >
+                Socials
+              </a>
             </Link>
           </li>
         </ul>
