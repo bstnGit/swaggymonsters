@@ -1,7 +1,7 @@
 import { Copy } from "../../public/copy";
 import { Button } from "./ui/button";
 
-export const Presale = () => {
+export default function Presale() {
   return (
     <section
       className="bg-[#FBD38D] h-screen flex-col gap-8 flex items-center justify-center"
@@ -35,4 +35,4 @@ export const Presale = () => {
       </div>
     </section>
   );
-};
+}
