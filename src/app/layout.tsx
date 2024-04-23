@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${swaggy.variable} font-swaggy`}>
-        <Navbar className="fixed top-0" />
+        <Navbar />
         {children}
         <Footer />
       </body>
