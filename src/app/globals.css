@@ -74,7 +74,7 @@
   a:hover {
     @apply font-semibold;
   }
-  /* styles/globals.css */
+
   @font-face {
     font-family: "swaggy";
     src: url("/fonts/swaggyfont.woff") format("woff"),
