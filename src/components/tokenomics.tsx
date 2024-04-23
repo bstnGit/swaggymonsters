@@ -1,3 +1,3 @@
 export default function Tokenomics() {
-  return <section className="bg-[#FFE6BA] h-screen" id="tokenomics"></section>;
+  return <section className="bg-[#FBD38D] h-screen" id="tokenomics"></section>;
 }
