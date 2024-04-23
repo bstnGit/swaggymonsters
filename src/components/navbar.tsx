@@ -1,20 +1,24 @@
 import { Swaggy } from "../../public/swaggymonster";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { Hamburger } from "../../public/hamburger";
 
 export default async function Navbar({ className }: { className?: string }) {
   return (
     <header>
       <nav
         className={twMerge(
-          "relative top-0  left-0 bg-[#EC0203] py-4 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919]",
+          "relative top-0  left-0 bg-[#EC0203] py-2  w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919]",
           className,
         )}
       >
-        <div className="absolute top-[40%] left-[5%] md:left-[15%]">
+        <div className="absolute top-[40%] left-[5%]">
           <Swaggy />
         </div>
-        <ul className="flex items-center w-fit mx-auto justify-center gap-12">
+        <div className="inline-block ml-auto right-0 px-6 md:hidden cursor-pointer">
+          <Hamburger />
+        </div>
+        <ul className="hidden md:flex items-center w-fit mx-auto justify-center gap-8 xl:gap-12">
           <li>
             <Link
               href="#"
