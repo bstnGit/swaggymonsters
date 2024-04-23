@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <header id="home">
       <nav
-        className={`relative md:h-auto top-0 left-0 bg-[#EC0203] py-2 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919] ${
+        className={`fixed md:h-auto top-0 left-0 bg-[#EC0203] py-2 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919] ${
           isNavOpen ? "h-screen" : "h-auto"
         }`}
       >
