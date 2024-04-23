@@ -1,12 +1,12 @@
 import Presale from "@/components/presale";
-import Hero from "@/components/hero";
+import Top from "@/components/top";
 import Adventure from "@/components/adventure";
 import Tokenomics from "@/components/tokenomics";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Top />
       <Presale />
       <Adventure />
       <Tokenomics />
