@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Swaggy } from "../../public/swaggymonster";
-import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 import { Hamburger } from "../../public/hamburger";
 
@@ -21,10 +20,11 @@ export default function Navbar() {
   return (
     <header id="home">
       <nav
-        className={`fixed md:h-auto top-0 left-0 bg-[#EC0203] py-2 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919] ${
+        className={`fixed md:h-auto top-0 left-0 py-2 w-full mx-auto flex items-center text-white min-h-[4rem] bg-foreground/50 backdrop-blur-md border-b border-gray-500/20 shadow-sm${
           isNavOpen ? "h-screen" : "h-auto"
         }`}
       >
+        {/*
         <div
           className={`absolute top-[40%] left-[5%] md:block ${
             isNavOpen ? "hidden" : ""
@@ -32,16 +32,15 @@ export default function Navbar() {
         >
           <Swaggy />
         </div>
+        */}
         <div
-          className={`inline-block md:hidden ml-auto right-0 px-6  cursor-pointer min-h-10 ${
-            isNavOpen ? "absolute top-2 " : ""
-          }`}
+          className={`absolute top-4 right-5 cursor-pointer min-h-10 `}
           onClick={toggleNav}
         >
           <Hamburger />
         </div>
         <ul
-          className={`md:flex md:flex-row flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
+          className={`flex md:flex-row flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
             isNavOpen ? "" : "hidden"
           }`}
         >
