@@ -71,10 +71,6 @@
     @apply bg-background text-foreground;
   }
 
-  a:hover {
-    @apply font-semibold;
-  }
-
   @font-face {
     font-family: "swaggy";
     src: url("/fonts/swaggyfont.woff") format("woff"),

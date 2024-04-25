@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Hamburger } from "../../public/hamburger";
+import { FaBars } from "react-icons/fa6";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar() {
     <header id="home">
       <nav
         className={`fixed md:h-auto top-0 left-0 py-2 w-full mx-auto flex items-center text-white min-h-[4rem] bg-foreground/50 backdrop-blur-md border-b border-gray-500/20 shadow-sm${
-          isNavOpen ? "h-screen" : "h-auto"
+          isNavOpen ? "flex flex-col gap-4" : "h-auto"
         }`}
       >
         {/*
@@ -32,19 +33,22 @@ export default function Navbar() {
         </div>
         */}
         <div
-          className={`flex justify-center w-full cursor-pointer min-h-10 `}
+          className={`flex justify-center bg-transparent  mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center border `}
           onClick={toggleNav}
         >
-          <Hamburger />
+          <FaBars />
         </div>
         <ul
-          className={`flex md:flex-row flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
-            isNavOpen ? "" : "hidden"
+          className={`flex md:flex-row cursor-pointer flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
+            isNavOpen ? "flex-col flex" : "hidden"
           }`}
         >
           <li>
             <Link href="#home" passHref legacyBehavior>
-              <a className="md:text-xl text-4xl" onClick={closeNav}>
+              <a
+                className="h-screen md:h-auto md:text-xl text-4xl"
+                onClick={closeNav}
+              >
                 Home
               </a>
             </Link>
