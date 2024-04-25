@@ -33,25 +33,21 @@ export default function Navbar() {
         </div>
         */}
         <div
-          className={`flex justify-center mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center border-2 `}
+          className={`flex justify-center mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center`}
           onClick={toggleNav}
         >
           <FaBars />
         </div>
         <ul
           className={`flex md:flex-row cursor-pointer flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
-            isNavOpen ? "flex-col flex" : "hidden"
+            isNavOpen ? "h-screen md:h-auto flex-col flex" : "hidden"
           }`}
         >
           <Link href="#home" passHref legacyBehavior>
-            <a
-              className="h-screen md:h-auto md:text-xl text-4xl"
-              onClick={closeNav}
-            >
+            <a className="md:h-auto md:text-xl text-4xl" onClick={closeNav}>
               Home
             </a>
           </Link>
-
           <Link href="#presale" passHref legacyBehavior>
             <a className="md:text-xl text-4xl" onClick={closeNav}>
               Presale
