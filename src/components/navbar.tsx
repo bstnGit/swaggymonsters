@@ -33,7 +33,7 @@ export default function Navbar() {
         </div>
         */}
         <div
-          className={`flex justify-center bg-transparent  mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center border `}
+          className={`flex justify-center mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center border-2 `}
           onClick={toggleNav}
         >
           <FaBars />
@@ -43,47 +43,41 @@ export default function Navbar() {
             isNavOpen ? "flex-col flex" : "hidden"
           }`}
         >
-          <li>
-            <Link href="#home" passHref legacyBehavior>
-              <a
-                className="h-screen md:h-auto md:text-xl text-4xl"
-                onClick={closeNav}
-              >
-                Home
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#presale" passHref legacyBehavior>
-              <a className="md:text-xl text-4xl" onClick={closeNav}>
-                Presale
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#adventure" passHref legacyBehavior>
-              <a className="md:text-xl text-4xl" onClick={closeNav}>
-                Adventure
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#tokenomics" passHref legacyBehavior>
-              <a className="md:text-xl text-4xl" onClick={closeNav}>
-                Tokenomics
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#home" passHref legacyBehavior>
-              <a
-                className="transition-all md:text-xl text-4xl"
-                onClick={closeNav}
-              >
-                Socials
-              </a>
-            </Link>
-          </li>
+          <Link href="#home" passHref legacyBehavior>
+            <a
+              className="h-screen md:h-auto md:text-xl text-4xl"
+              onClick={closeNav}
+            >
+              Home
+            </a>
+          </Link>
+
+          <Link href="#presale" passHref legacyBehavior>
+            <a className="md:text-xl text-4xl" onClick={closeNav}>
+              Presale
+            </a>
+          </Link>
+
+          <Link href="#adventure" passHref legacyBehavior>
+            <a className="md:text-xl text-4xl" onClick={closeNav}>
+              Adventure
+            </a>
+          </Link>
+
+          <Link href="#tokenomics" passHref legacyBehavior>
+            <a className="md:text-xl text-4xl" onClick={closeNav}>
+              Tokenomics
+            </a>
+          </Link>
+
+          <Link href="#home" passHref legacyBehavior>
+            <a
+              className="transition-all md:text-xl text-4xl"
+              onClick={closeNav}
+            >
+              Socials
+            </a>
+          </Link>
         </ul>
       </nav>
     </header>
