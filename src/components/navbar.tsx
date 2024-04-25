@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Swaggy } from "../../public/swaggymonster";
 import Link from "next/link";
 import { Hamburger } from "../../public/hamburger";
 
@@ -9,7 +8,6 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
-    console.log("Yes");
     setIsNavOpen(!isNavOpen);
   };
 
@@ -34,7 +32,7 @@ export default function Navbar() {
         </div>
         */}
         <div
-          className={`absolute top-4 right-5 cursor-pointer min-h-10 `}
+          className={`flex justify-center w-full cursor-pointer min-h-10 `}
           onClick={toggleNav}
         >
           <Hamburger />
@@ -46,40 +44,28 @@ export default function Navbar() {
         >
           <li>
             <Link href="#home" passHref legacyBehavior>
-              <a
-                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
-                onClick={closeNav}
-              >
+              <a className="md:text-xl text-4xl" onClick={closeNav}>
                 Home
               </a>
             </Link>
           </li>
           <li>
             <Link href="#presale" passHref legacyBehavior>
-              <a
-                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
-                onClick={closeNav}
-              >
+              <a className="md:text-xl text-4xl" onClick={closeNav}>
                 Presale
               </a>
             </Link>
           </li>
           <li>
             <Link href="#adventure" passHref legacyBehavior>
-              <a
-                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
-                onClick={closeNav}
-              >
+              <a className="md:text-xl text-4xl" onClick={closeNav}>
                 Adventure
               </a>
             </Link>
           </li>
           <li>
             <Link href="#tokenomics" passHref legacyBehavior>
-              <a
-                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
-                onClick={closeNav}
-              >
+              <a className="md:text-xl text-4xl" onClick={closeNav}>
                 Tokenomics
               </a>
             </Link>
@@ -87,7 +73,7 @@ export default function Navbar() {
           <li>
             <Link href="#home" passHref legacyBehavior>
               <a
-                className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all md:text-xl text-4xl"
+                className="transition-all md:text-xl text-4xl"
                 onClick={closeNav}
               >
                 Socials
