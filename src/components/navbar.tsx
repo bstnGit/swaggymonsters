@@ -36,7 +36,7 @@ export default function Navbar() {
           className={`flex justify-center mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center`}
           onClick={toggleNav}
         >
-          <FaBars />
+          <FaBars className="w-10 h-10" />
         </div>
         <ul
           className={`flex md:flex-row cursor-pointer flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
