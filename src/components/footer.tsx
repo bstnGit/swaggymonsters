@@ -3,7 +3,10 @@ import { twMerge } from "tailwind-merge";
 export default function Footer({ className }: { className?: string }) {
   return (
     <footer
-      className={twMerge("flex justify-center bg-[#FFA500] py-5", className)}
+      className={twMerge(
+        "flex justify-center bg-[#FFA500] py-5 mx-2",
+        className
+      )}
     >
       <div className="flex flex-col w-full text-center">
         <p className="text-xs italic">
