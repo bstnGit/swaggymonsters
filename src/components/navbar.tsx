@@ -40,7 +40,7 @@ export default function Navbar() {
         </div>
 
         <ul
-          className={`flex cursor-pointer flex-col items-center w-fit mx-auto justify-center gap-6 min-h-10 z-20 p-[30px] ${
+          className={`flex cursor-pointer flex-col items-center w-fit mx-auto justify-center gap-5 min-h-10 z-20 p-[30px] rounded-xl [&_a]:text-xl ${
             isNavOpen ? "bg-black" : "hidden"
           }`}
         >
