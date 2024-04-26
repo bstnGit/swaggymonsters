@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header id="home">
       <nav
-        className={`absolute py-5 left-1/2 transform -translate-x-1/2 text-white z-[1000] ${
+        className={`absolute py-5 left-1/2 transform -translate-x-1/2 text-white z-[10000] ${
           isNavOpen ? "" : "h-auto"
         }`}
       >
@@ -40,7 +40,7 @@ export default function Navbar() {
         </div>
 
         <ul
-          className={`flex cursor-pointer flex-col items-center w-fit mx-auto justify-center gap-5 min-h-10 z-20 p-[30px] rounded-xl [&_a]:text-xl ${
+          className={`flex cursor-pointer flex-col items-center w-fit mx-auto justify-center gap-5 min-h-10 z-20 p-[30px] rounded-xl [&_a]:text-2xl ${
             isNavOpen ? "bg-black" : "hidden"
           }`}
         >
