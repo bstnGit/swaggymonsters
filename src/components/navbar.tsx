@@ -36,12 +36,15 @@ export default function Navbar() {
           className={`flex justify-center mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center`}
           onClick={toggleNav}
         >
-          <FaBars className="w-10 h-10 mt-2" />
+          <FaBars
+            className={`w-10 h-10 mt-2${isNavOpen ? " h-[1000rem]" : ""}`}
+          />
         </div>
         <ul
           className={`flex cursor-pointer flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
             isNavOpen ? "h-screen flex-col flex bg-black w-full" : "hidden"
           }`}
+          onClick={toggleNav}
         >
           <Link href="#home" passHref legacyBehavior>
             <a className="" onClick={closeNav}>
