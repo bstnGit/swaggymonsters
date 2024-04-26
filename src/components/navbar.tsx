@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header id="home">
       <nav
-        className={`absolute py-5 left-1/2 transform -translate-x-1/2 text-white min-h-[4rem] z-[1000] ${
+        className={`absolute py-5 left-1/2 transform -translate-x-1/2 text-white z-[1000] ${
           isNavOpen ? "" : "h-auto"
         }`}
       >
@@ -33,15 +33,15 @@ export default function Navbar() {
         </div>
         */}
         <div
-          className={`flex justify-center mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center`}
+          className={`flex justify-center mx-auto cursor-pointer items-center`}
           onClick={toggleNav}
         >
-          <FaBars className="w-10 h-10 mt-2" />
+          <FaBars className="w-10 h-10" />
         </div>
 
         <ul
           className={`flex cursor-pointer flex-col items-center w-fit mx-auto justify-center gap-6 min-h-10 z-20 p-[30px] ${
-            isNavOpen ? "flex-col flex bg-black" : "hidden"
+            isNavOpen ? "bg-black" : "hidden"
           }`}
         >
           <Link href="#home" passHref legacyBehavior>
