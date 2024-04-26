@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header id="home">
       <nav
-        className={`fixed md:h-auto top-0 left-0 py-2 w-full mx-auto flex items-center text-white min-h-[4rem]${
+        className={`flex top-0 md:h-auto py-2 items-center justify-center text-white min-h-[4rem] z-20 ${
           isNavOpen ? "flex flex-col gap-4" : "h-auto"
         }`}
       >
@@ -36,15 +36,13 @@ export default function Navbar() {
           className={`flex justify-center mx-auto aspect-square rounded-sm cursor-pointer min-h-10 items-center`}
           onClick={toggleNav}
         >
-          <FaBars
-            className={`w-10 h-10 mt-2${isNavOpen ? "h-[1000rem]" : ""}`}
-          />
+          <FaBars className="w-10 h-10 mt-2" />
         </div>
+
         <ul
-          className={`flex cursor-pointer flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
+          className={`flex cursor-pointer flex-col items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 z-20 ${
             isNavOpen ? "flex-col flex bg-black" : "hidden"
           }`}
-          onClick={toggleNav}
         >
           <Link href="#home" passHref legacyBehavior>
             <a className="" onClick={closeNav}>
@@ -76,6 +74,12 @@ export default function Navbar() {
           </Link>
         </ul>
       </nav>
+      {isNavOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full z-10"
+          onClick={toggleNav}
+        />
+      )}
     </header>
   );
 }

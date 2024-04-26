@@ -1,5 +1,11 @@
+import Navbar from "../components/navbar";
+
 export default function Top() {
-  return <section className="bg-[#FFA500] h-screen"></section>;
+  return (
+    <section className="bg-[#FFA500] h-screen">
+      <Navbar />
+    </section>
+  );
 
   {
     /*

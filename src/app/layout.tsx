@@ -36,7 +36,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-full">
-        <Navbar />
         {children}
         <Footer />
       </body>
