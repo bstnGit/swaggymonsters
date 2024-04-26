@@ -4,7 +4,7 @@ export default function Top() {
   return (
     <section className="relative bg-[#FFA500] h-screen">
       <Navbar />
-      <div className="scroll-wrapper">
+      <div className="">
         <iframe
           className="z-[100]"
           src="https://www.firemove.de/firemove-de/sm-web/maenner/index.htm"
