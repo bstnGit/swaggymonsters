@@ -5,21 +5,21 @@ export default function Top() {
     <section className="relative bg-[#000] h-screen">
       <Navbar />
       <iframe
-        className="z-[300]"
+        className="absolute z-[300]"
         src="https://www.firemove.de/swag/hero/1/index.html"
         title="Layer 3"
         width="100%"
         height="100%"
       />
       <iframe
-        className="z-[200]"
+        className="absolute z-[200]"
         src="https://www.firemove.de/swag/hero/2/index.html"
         title="Layer 2"
         width="100%"
         height="100%"
       />
       <iframe
-        className="z-[100]"
+        className="absolute z-[100]"
         src="https://www.firemove.de/swag/hero/3/index.html"
         title="Layer 1"
         width="100%"
