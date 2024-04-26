@@ -3,7 +3,12 @@ import YouTube from "react-youtube";
 import React, { useEffect, useState } from "react";
 
 export default function Adventure() {
-  return <div></div>;
+  return (
+    <section
+      className="bg-[#8b8881] flex items-center w-full justify-center h-screen flex-col gap-20"
+      id="adventure"
+    ></section>
+  );
 }
 
 {
