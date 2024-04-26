@@ -9,7 +9,7 @@ export default function Home() {
       <Top />
       <Presale />
       <Adventure />
-      <Tokenomics />
+      {/* <Tokenomics /> */}
     </main>
   );
 }
