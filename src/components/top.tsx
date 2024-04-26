@@ -1,5 +1,7 @@
 export default function Top() {
-  return {
+  return <div></div>;
+
+  {
     /*<section className="bg-[#FFA500] h-screen">
       <iframe
         className="z-[100]"
@@ -10,5 +12,5 @@ export default function Top() {
     />
     </section>
     */
-  };
+  }
 }
