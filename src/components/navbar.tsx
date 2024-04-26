@@ -44,33 +44,30 @@ export default function Navbar() {
           }`}
         >
           <Link href="#home" passHref legacyBehavior>
-            <a className="md:h-auto md:text-xl text-4xl" onClick={closeNav}>
+            <a className="" onClick={closeNav}>
               Home
             </a>
           </Link>
           <Link href="#presale" passHref legacyBehavior>
-            <a className="md:text-xl text-4xl" onClick={closeNav}>
+            <a className="" onClick={closeNav}>
               Presale
             </a>
           </Link>
 
           <Link href="#adventure" passHref legacyBehavior>
-            <a className="md:text-xl text-4xl" onClick={closeNav}>
+            <a className="" onClick={closeNav}>
               Adventure
             </a>
           </Link>
 
           <Link href="#tokenomics" passHref legacyBehavior>
-            <a className="md:text-xl text-4xl" onClick={closeNav}>
+            <a className="" onClick={closeNav}>
               Tokenomics
             </a>
           </Link>
 
           <Link href="#home" passHref legacyBehavior>
-            <a
-              className="transition-all md:text-xl text-4xl"
-              onClick={closeNav}
-            >
+            <a className="" onClick={closeNav}>
               Socials
             </a>
           </Link>
