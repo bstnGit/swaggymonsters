@@ -19,8 +19,8 @@ export default function Navbar() {
   return (
     <header id="home">
       <nav
-        className={`flex top-0 md:h-auto py-2 items-center justify-center text-white min-h-[4rem] z-20 ${
-          isNavOpen ? "flex flex-col gap-4" : "h-auto"
+        className={`flex top-0 md:h-auto py-5 items-center justify-center text-white min-h-[4rem] z-20 ${
+          isNavOpen ? "flex-col gap-4" : "h-auto"
         }`}
       >
         {/*
