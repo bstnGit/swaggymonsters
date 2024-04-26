@@ -2,7 +2,7 @@ import Navbar from "../components/navbar";
 
 export default function Top() {
   return (
-    <section className="relative bg-[#FFA500] h-screen">
+    <section className="relative bg-[#FFA500] overflow-auto h-screen">
       <Navbar />
       <iframe
         className="z-[100]"
