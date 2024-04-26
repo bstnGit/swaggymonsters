@@ -20,7 +20,7 @@ export default function Navbar() {
     <header id="home">
       <nav
         className={`fixed md:h-auto top-0 left-0 py-2 w-full mx-auto flex items-center text-white min-h-[4rem]${
-          isNavOpen ? "flex flex-col gap-4" : "h-auto"
+          isNavOpen ? "flex flex-col gap-4 bg-black" : "h-auto"
         }`}
       >
         {/*
@@ -39,8 +39,8 @@ export default function Navbar() {
           <FaBars className="w-10 h-10 mt-2" />
         </div>
         <ul
-          className={`flex md:flex-row cursor-pointer flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
-            isNavOpen ? "h-screen md:h-auto flex-col flex" : "hidden"
+          className={`flex cursor-pointer flex-col md:space-y-0 space-y-2 items-center w-fit mx-auto justify-center gap-8 xl:gap-12 min-h-10 ${
+            isNavOpen ? "h-screen flex-col flex bg-black w-full" : "hidden"
           }`}
         >
           <Link href="#home" passHref legacyBehavior>
