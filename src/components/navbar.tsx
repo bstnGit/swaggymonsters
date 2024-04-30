@@ -33,7 +33,7 @@ export default function Navbar() {
         </div>
         */}
         <div
-          className={`flex justify-center mx-auto cursor-pointer items-center mb-3 border-solid border-4 border-black rounded-md bg-black p-2`}
+          className={`flex justify-center mx-auto cursor-pointer items-center mb-3 border-solid border-4 border-black rounded-md bg-black p-2 max-w-[63px]`}
           onClick={toggleNav}
         >
           <FaBars className="w-10 h-10" />
