@@ -1,6 +1,6 @@
 import Navbar from "./navbar";
 
-export default function Hero() {
+export default function Top() {
   return (
     <section className="relative bg-[#000] h-screen">
       <Navbar />
