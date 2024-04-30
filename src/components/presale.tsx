@@ -15,7 +15,7 @@ export default function Presale() {
       className="bg-[#333333] flex flex-col md:gap-8 items-center justify-center py-16"
       id="presale"
     >
-      <div className="z-[1000]">
+      <div className="max-w-[900px] h-auto z-[2000] w-90%">
         <div className="flex items-center justify-center flex-col mb-5">
           <h1 className="font-bold text-3xl md:text-5xl text-white">Presale</h1>
           <p className="text-white">102.98 SOL has already been collected!</p>
@@ -55,12 +55,22 @@ export default function Presale() {
         </div>
       </div>
       <iframe
+        className="absolute z-[200]"
+        src="https://www.firemove.de/swag/presale/1/index.html"
+        title="Layer 2"
+        width="100%"
+        height="100%"
+      />
+
+      <iframe
         className="absolute z-[100]"
-        src="https://www.firemove.de/swag/presale/3/index.html"
+        src="https://www.firemove.de/swag/presale/2/index.html"
         title="Layer 1"
         width="100%"
         height="100%"
       />
+
+      <div className="absolute top-0 left-0 w-full h-screen z-[1000]"></div>
     </section>
   );
 }

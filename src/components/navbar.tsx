@@ -57,7 +57,7 @@ export default function Navbar() {
 
           <Link href="#adventure" passHref legacyBehavior>
             <a className="" onClick={closeNav}>
-              Adventure
+              Emoji-Music
             </a>
           </Link>
 

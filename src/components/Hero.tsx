@@ -1,13 +1,31 @@
+import Navbar from "./navbar";
+
 export default function Hero() {
   return (
-    <section className="bg-[#FFA500] w-vw h-screen">
-      <div className="font-bold [&_h1]:text-[4rem] flex flex-col items-center justify-center">
-        <div className="mt-48"></div>
-        <div className="flex flex-col gap-4 items-center justify-center text-center">
-          <h1 className="">Welcome to Swaggy Monsters!</h1>
-          <p className="">No $SWAG? Better invest now!</p>
-        </div>
-      </div>
+    <section className="relative bg-[#000] h-screen">
+      <Navbar />
+      <iframe
+        className="absolute z-[300] overflow-hidden"
+        src="https://www.firemove.de/swag/hero/1/index.html"
+        title="Layer 3"
+        width="100%"
+        height="100%"
+      />
+      <iframe
+        className="absolute z-[200]"
+        src="https://www.firemove.de/swag/hero/2/index.html"
+        title="Layer 2"
+        width="100%"
+        height="100%"
+      />
+      <iframe
+        className="absolute z-[100]"
+        src="https://www.firemove.de/swag/hero/3/index.html"
+        title="Layer 1"
+        width="100%"
+        height="100%"
+      />
+      <div className="absolute top-0 left-0 w-full h-screen z-[1000]"></div>
     </section>
   );
 }
