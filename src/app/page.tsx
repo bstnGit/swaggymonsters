@@ -1,5 +1,5 @@
 import Presale from "@/components/presale";
-import Top from "@/components/hero";
+import Top from "@/components/top";
 import Adventure from "@/components/emoji-music";
 import Tokenomics from "@/components/tokenomics";
 
