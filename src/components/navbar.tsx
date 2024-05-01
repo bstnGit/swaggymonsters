@@ -63,7 +63,7 @@ export default function Navbar() {
             <a onClick={closeNav}>Socials</a>
           </Link>
 
-          <Link href="#home" className="ml-auto">
+          <Link href="#home" className="ml-auto" onClick={closeNav}>
             <WalletMultiButton className="!bg-[#ffa500]" />
           </Link>
         </ul>
