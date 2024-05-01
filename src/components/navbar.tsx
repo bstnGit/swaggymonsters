@@ -1,68 +1,79 @@
 "use client";
-import { Swaggy } from "../../public/swaggymonster";
-import { twMerge } from "tailwind-merge";
+
+import { useState } from "react";
 import Link from "next/link";
+import { FaBars } from "react-icons/fa6";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
-export default async function Navbar({ className }: { className?: string }) {
+export default function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
-    <header>
+    <header id="home">
       <nav
-        className={twMerge(
-          "relative top-0  left-0 bg-[#EC0203] py-4 w-full mx-auto flex items-center border-b-4 text-white border-[#FFC919]",
-          className
-        )}
+        className={`absolute py-5 left-1/2 transform -translate-x-1/2 text-white z-[10000] ${
+          isNavOpen ? "" : "h-auto"
+        }`}
       >
-        <div className="absolute top-[40%] left-[15%]">
+        {/*
+        <div
+          className={`absolute top-[40%] left-[5%] md:block ${
+            isNavOpen ? "hidden" : ""
+          }`}
+        >
           <Swaggy />
         </div>
-        <ul className="flex items-center w-fit mx-auto justify-center gap-12">
-          <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              Presale
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              Tokenomics
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              Swagger
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="border-b-2 border-transparent hover:border-[#FFC919] hover:font-semibold transition-all"
-            >
-              Kontakt
-            </Link>
-          </li>
+        */}
+        <div
+          className={`flex justify-center mx-auto cursor-pointer max-w-fit items-center mb-3 border-solid border-4 border-black rounded-md bg-black p-2`}
+          onClick={toggleNav}
+        >
+          <FaBars className="w-10 h-10" />
+        </div>
 
-          <li className="ml-auto">
+        <ul
+          className={`flex cursor-pointer flex-col items-center w-fit mx-auto justify-center gap-5 min-h-10 z-20 p-[30px] rounded-xl [&_a]:text-2xl ${
+            isNavOpen ? "bg-black" : "hidden"
+          }`}
+        >
+          <Link href="#home" className="" passHref legacyBehavior>
+            <a onClick={closeNav}>Home</a>
+          </Link>
+          <Link href="#presale" className="" passHref legacyBehavior>
+            <a onClick={closeNav}>Presale</a>
+          </Link>
+
+          <Link className="" href="#adventure" passHref legacyBehavior>
+            <a onClick={closeNav}>Adventure</a>
+          </Link>
+
+          <Link href="#tokenomics" className="" passHref legacyBehavior>
+            <a onClick={closeNav}>Tokenomics</a>
+          </Link>
+
+          <Link href="#home" className="" passHref legacyBehavior>
+            <a onClick={closeNav}>Socials</a>
+          </Link>
+
+          <Link href="#home" className="ml-auto">
             <WalletMultiButton className="!bg-[#ffa500]" />
-          </li>
+          </Link>
         </ul>
       </nav>
+      {isNavOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full z-[5000]"
+          onClick={toggleNav}
+        />
+      )}
     </header>
   );
 }

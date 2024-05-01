@@ -1,7 +1,9 @@
-import { Presale } from "@/components/presale";
 import ListTransactions from "@/components/list-transactions";
-import Hero from "@/components/Hero";
 import Head from "next/head";
+import Top from "@/components/top";
+import Presale from "@/components/presale";
+import Adventure from "@/components/adventure";
+import Tokenomics from "@/components/tokenomics";
 
 export default function Home() {
   return (
@@ -9,9 +11,10 @@ export default function Home() {
       <Head>
         <title>Swaggy Monsters</title>
       </Head>
-      <Hero />
+      <Top />
       <Presale />
-      <ListTransactions />
+      <Adventure />
+      <Tokenomics />
     </main>
   );
 }

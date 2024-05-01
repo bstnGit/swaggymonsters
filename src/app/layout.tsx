@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "../components/navbar";
 import "./globals.css";
 import Footer from "@/components/footer";
 import { Socials } from "@/components/socials";
 import localFont from "next/font/local";
 import WalletContextProvider from "@/contexts/wallet-context-provider";
+import Navbar from "@/components/navbar";
 
 const swaggy = localFont({
   src: [
