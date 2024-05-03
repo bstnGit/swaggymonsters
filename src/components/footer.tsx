@@ -4,7 +4,7 @@ export default function Footer({ className }: { className?: string }) {
   return (
     <footer
       className={twMerge(
-        "flex justify-center bg-[#FFA500] py-5 mx-2",
+        "flex justify-center bg-[#FFA500] py-5",
         className
       )}
     >
