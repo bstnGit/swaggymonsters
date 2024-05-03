@@ -13,7 +13,7 @@ const socials = [
   { name: "Twitter", image: Twitter, link: "" },
 ];
 
-export const Socials = () => {
+export default function Socials() {
   return (
     <div className="flex flex-col fixed right-7 top-[42%] gap-6">
       {socials.map((social, index) => (

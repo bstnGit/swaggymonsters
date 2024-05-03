@@ -25,6 +25,7 @@ export default function Top() {
         width="100%"
         height="100%"
       />
+
       <div className="absolute top-0 left-0 w-full h-screen z-[1000]"></div>
     </section>
   );

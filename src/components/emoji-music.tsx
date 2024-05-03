@@ -35,7 +35,7 @@ export default function EmojiMusic() {
 
         <YouTube videoId="kK0AHd9N7dk" opts={videoOpts} />
       </div>
-
+{/*
       <iframe
         className="absolute z-[200]"
         src="https://www.firemove.de/swag/emoji-music/1/index.html"
@@ -51,7 +51,7 @@ export default function EmojiMusic() {
         width="100%"
         height="100%"
       />
-
+*/}
       <div className="absolute top-0 left-0 w-full h-screen z-[1000]"></div>
     </section>
   );
