@@ -12,10 +12,10 @@ export default function Presale() {
 
   return (
     <section
-      className="relative bg-[#333333] items-center justify-center h-screen"
+      className="relative bg-[#333333] items-center justify-center min-h-[600px] md:min-h-[700px] lg:min-h-[800px] xl:min-h-[900px]"
       id="presale"
     >
-  <div className="max-w-[900px] h-auto z-[2000] w-90% absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="max-w-[900px] h-auto z-[2000] w-90% absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div>
           <div className="flex items-center justify-center flex-col mb-5">
             <h1 className="font-bold text-3xl md:text-5xl text-white">Presale</h1>
@@ -56,23 +56,22 @@ export default function Presale() {
           </div>
         </div>
       </div>
-      <div className="relative w-full h-full">
-        <iframe
-          className="absolute top-0 left-0 z-[200] h-full"
-          src="https://www.firemove.de/swag/presale/1/index.html"
-          title="Layer 2"
-          width="100%"
-          height="100%"
-        />
 
-        <iframe
-          className="absolute top-0 left-0 z-[100]"
-          src="https://www.firemove.de/swag/presale/2/index.html"
-          title="Layer 1"
-          width="100%"
-          height="100%"
-        />
-      </div>
+      <iframe
+        className="absolute top-0 left-0 z-[100] h-full border-1"
+        src="https://www.firemove.de/swag/presale/2/index.html"
+        title="Layer 1"
+        width="100%"
+        height="100%"
+      />
+
+      <iframe
+        className="absolute top-0 left-0 z-[200] h-full border-1"
+        src="https://www.firemove.de/swag/presale/1/index.html"
+        title="Layer 2"
+        width="100%"
+        height="100%"
+      />
     </section>
   );
 }
